@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Love Is</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<div class="container">
+
+    <div class="title">
+        с днем рождения<br>
+        любовь моя 💗
+    </div>
+
+    <div class="card">
+
+        <!-- ФОТКА -->
+
+        <div class="image-box">
+
+            <img id="lovePhoto"
+                 src="img/photo.jpg"
+                 alt="">
+
+        </div>
+
+        <!-- КНОПКИ -->
+
+        <button class="btn pink"
+                onclick="openGum()">
+
+            Открыть жвачку
+
+        </button>
+
+        <button class="btn white" 
+                onclick="nextPhoto()">
+
+            жмякни
+
+        </button>
+
+        <!-- ТЕКСТ -->
+
+        <div class="bottom">
+
+            Нажимай «жмякни»,<br>
+            чтобы увидеть другую обёртку 💌
+
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+
+const images = [
+
+    "img/photo.jpg",
+
+    "img/photo1.jpg",
+    "img/photo2.jpg",
+    "img/photo3.jpg",
+    "img/photo4.jpg",
+    "img/photo5.jpg",
+    "img/photo6.jpg",
+    "img/photo7.jpg",
+    "img/photo8.jpg",
+    "img/photo9.jpg",
+    "img/photo10.jpg"
+
+];
+
+let current = 0;
+
+/* СТАРТОВОЕ ФОТО */
+
+window.onload = function(){
+
+    document.getElementById("lovePhoto").src =
+        images[0];
+
+};
+
+/* ОТКРЫТЬ ЖВАЧКУ */
+
+function openGum(){
+
+    current = 1;
+
+    document.getElementById("lovePhoto").src =
+        images[current];
+
+}
+
+/* СМЕНА ФОТО */
+
+function nextPhoto(){
+
+    current++;
+
+    if(current >= images.length){
+
+        current = 1;
+
+    }
+
+    document.getElementById("lovePhoto").src =
+        images[current];
+
+}
+</script>
+
+</body>
+</html>

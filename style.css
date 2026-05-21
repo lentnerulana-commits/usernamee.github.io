@@ -1,0 +1,167 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#f8edf2;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    min-height:100vh;
+
+    padding:20px;
+
+    overflow:hidden;
+}
+
+.container{
+    width:350px;
+    text-align:center;
+}
+
+.title{
+    font-size:48px;
+    font-weight:900;
+
+    color:#ff4f93;
+
+    line-height:1.1;
+
+    margin-bottom:25px;
+
+    text-shadow:
+        0 0 3px rgba(255,79,147,.35),
+        0 0 8px rgba(200,40,110,.25),
+        0 0 15px rgba(120,20,70,.2);
+
+    animation:glowSoft 2.5s ease-in-out infinite alternate;
+}
+
+.card{
+    background:white;
+
+    border-radius:25px;
+
+    padding:25px 20px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+/* РАМКА ТОЛЬКО У ФОТКИ */
+
+.image-box{
+    position:relative;
+
+    width:100%;
+    height:300px;
+
+    border:3px solid black;
+    border-radius:18px;
+
+    background:white;
+
+    overflow:visible;
+
+    margin-bottom:20px;
+}
+
+.image-box img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 14px;
+    display: block;
+}
+
+/* КНОПКИ */
+
+.btn{
+    width:100%;
+
+    margin-top:14px;
+
+    padding:18px;
+
+    border:none;
+    border-radius:40px;
+
+    font-size:28px;
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:scale(1.03);
+}
+
+.pink{
+    background:linear-gradient(135deg,#ff2e6f,#ff77ad);
+
+    color:white;
+
+    box-shadow:
+        0 0 15px rgba(255,46,111,.6),
+        0 10px 25px rgba(255,46,111,.3);
+}
+
+.white{
+    background:linear-gradient(135deg,#ffd6e5,#fff0f5);
+
+    color:#ff3d7f;
+
+    box-shadow:
+        0 6px 15px rgba(255,105,160,.15);
+}
+
+.bottom{
+    margin-top:18px;
+
+    color:#555;
+
+    font-size:20px;
+
+    line-height:1.4;
+}
+
+/* СВЕЧЕНИЕ */
+
+@keyframes glowSoft{
+
+    from{
+        text-shadow:
+            0 0 2px rgba(255,79,147,.25),
+            0 0 6px rgba(200,40,110,.2),
+            0 0 12px rgba(120,20,70,.15);
+    }
+
+    to{
+        text-shadow:
+            0 0 4px rgba(255,79,147,.4),
+            0 0 10px rgba(200,40,110,.3),
+            0 0 18px rgba(120,20,70,.25);
+    }
+}
+
+@media (max-width: 480px) {
+
+    .image-box{
+        width: 100%;
+        height: 240px;   /* делаем выше — прямоугольник вниз */
+        border-radius: 16px;
+        border-width: 3px;
+    }
+
+    .image-box img{
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+    }
+}
