@@ -150,18 +150,41 @@ body{
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
+
+    body{
+        padding: 10px;
+        align-items: flex-start;
+    }
+
+    .container{
+        width: 100%;
+        max-width: 420px;
+    }
+
+    .title{
+        font-size: 28px;
+    }
+
+    .card{
+        padding: 14px;
+        border-radius: 18px;
+    }
 
     .image-box{
         width: 100%;
-        height: 240px;   /* делаем выше — прямоугольник вниз */
-        border-radius: 16px;
-        border-width: 3px;
+        height: 240px;
+        border: 3px solid black;
+        border-radius: 14px;
     }
 
-    .image-box img{
-        height: 100%;
-        width: 100%;
-        object-fit: contain;
+    .btn{
+        font-size: 18px;
+        padding: 14px;
+        border-radius: 35px;
+    }
+
+    .bottom{
+        font-size: 15px;
     }
 }
